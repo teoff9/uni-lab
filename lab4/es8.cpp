@@ -8,13 +8,21 @@ using namespace std;
 int delete_entry_swap(float[], int, int, int);
 
 int main(){
+    float v[5] = {1,2,3,4,0};
+    int x = delete_entry_swap(v, 5, 4, 3);
+
+    for(float a : v){
+        cout << a << endl;
+    }
+
+    cout << "\n" << x << endl;
 
     return 0;
 }
 
 int delete_entry_swap(float v[], int size, int used, int where){
     if (where>= 0 && where<=used-1){
-        for (int i = where; i < used-2; i++ ){
+        for (int i = where; i < used-1; i++ ){
             std::swap(v[i], v[i+1]);
         }
 
