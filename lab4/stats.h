@@ -1,0 +1,26 @@
+//24.10.23 by Matteo Fava
+
+//Libreria di statistica
+
+#include <cmath>
+
+//media di una n-upla con n = n_data
+float media(int data[], int n_data){
+    float sum = 0;
+    for (int i=0; i <n_data; i++){
+        sum += (float)data[i];
+    }
+
+    return sum/n_data;
+}
+
+//dev. std. di n-upla con n = n_data
+float devstd(int data[], int n_data){
+    float m = media(data, n_data);
+    float numeratore = 0;
+    for (int i = 0; i < n_data; i++){
+        numeratore += pow((data[i]-m), 2);
+    }
+    return sqrt(numeratore/(n_data-1));
+
+}
