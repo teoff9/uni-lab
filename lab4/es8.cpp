@@ -13,8 +13,8 @@ int main(){
 }
 
 int delete_entry_swap(float v[], int size, int used, int where){
-    if (where>= 0 && where<=used-2){
-        for (int i = where; i < used-1; i++ ){
+    if (where>= 0 && where<=used-1){
+        for (int i = where; i < used-2; i++ ){
             std::swap(v[i], v[i+1]);
         }
 
