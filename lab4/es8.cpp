@@ -9,7 +9,7 @@ int delete_entry_swap(float[], int, int, int);
 
 int main(){
     float v[5] = {1,2,3,4,0};
-    int x = delete_entry_swap(v, 5, 4, 3);
+    int x = delete_entry_swap(v, 5, 4, 1);
 
     for(float a : v){
         cout << a << endl;
@@ -22,10 +22,7 @@ int main(){
 
 int delete_entry_swap(float v[], int size, int used, int where){
     if (where>= 0 && where<=used-1){
-        for (int i = where; i < used-1; i++ ){
-            std::swap(v[i], v[i+1]);
-        }
-
+        std::swap(v[where], v[used-1]);
         return used-1;
 
     } else {
