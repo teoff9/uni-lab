@@ -24,3 +24,13 @@ float devstd(int data[], int n_data){
     return sqrt(numeratore/(n_data-1));
 
 }
+
+//restituisce se un val e' |val-media| > 3stdDev
+bool is_outlier(int val, float media, float std_dev){
+    if (fabs(val-media)> 3*std_dev){
+        return true;
+    } else {
+        return false;
+    }
+
+}
