@@ -36,3 +36,12 @@ bool is_outlier(int val, float media, float std_dev){
     }
 
 }
+
+//restituisce la mediana di un insieme ordinato
+float mediana(float data[], int used){
+    if (used%2 != 0){
+        return data[(used-1)/2];
+    } else {
+        return (data[used/2] + data[used/2 - 1])/2;
+    }
+}

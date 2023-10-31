@@ -3,6 +3,8 @@
 #include <iostream>
 using namespace std;
 
+#include "lib_statistica.h"
+
 //Prende un array, n_data, n_used e ritorna il numero di pari (per i dispari fare n-pari)
 int conta_pari(int[], int, int);
 
@@ -11,9 +13,9 @@ bool esistenza_sequenza(int[], int, int, int);
 
 
 int main(){
-    int data[5] = {1, 2, 3, 4, 5};
+    float data[6] = {1., 2., 3., 4., 5., 6.};
 
-    cout << esistenza_sequenza(data, 5, 5, 1) << endl;
+    cout << mediana(data, 6) << endl;
 
 
 
