@@ -5,6 +5,7 @@
 #include <cmath>
 
 //media di una n-upla con n = n_data
+//ritorna la media 
 float media(int data[], int n_data){
     float sum = 0;
     for (int i=0; i <n_data; i++){
@@ -15,6 +16,7 @@ float media(int data[], int n_data){
 }
 
 //dev. std. di n-upla con n = n_data
+// ritorna la dev standard
 float devstd(int data[], int n_data){
     float m = media(data, n_data);
     float numeratore = 0;
