@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 #include <fstream>
-#include "../lib/stats/stats.h"
+//#include "../lib/stats/stats.h"
 
 #define NN 150
 
@@ -21,13 +21,11 @@ int main(){
     }
 
     //carica i dati nei due array con un ciclo spoletini
-    for (int i = 0; i<NN; i++){
-        if (!(data >> vdiams[i] && data >> vcols[i])){
-            used++;
-            break;
-        }
+    while (used < 150 && data >> vdiams[used -1] && data >> vcols[used - 1]){
+        used ++;
     }
 
+    cout << used << endl;
     //calcola media e dev standard
     
     
