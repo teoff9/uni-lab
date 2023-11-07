@@ -21,7 +21,7 @@ float devstd_int(int data[], int used);
 //dev. std. di array di float con int used come numero di dati usati
 //data: array di dati
 //used: numero di dati usati nell'array
-float devstd_float(int data[], int used);
+float devstd_float(float data[], int used);
 
 //restituisce se un val e' |val-media| > 3stdDev
 //val: float del valore 
