@@ -20,7 +20,7 @@ int pos_of_min(float data[], int i, int j){
 void selection_sort(float data[], int n_data){
     for (int i = 0; i < n_data -1; i++){
         int k = pos_of_min(data, i, n_data-1);
-        int tmp = data[k];
+        float tmp = data[k];
         data[k] = data[i];
         data[i] = tmp;
     }
