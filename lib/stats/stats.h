@@ -3,16 +3,33 @@
 //Libreria di statistica
 
 
-//media di una n-upla con n = n_data
-//ritorna la media 
-float media(int data[], int n_data);
+//media di un array di int con used come numero di dati usati
+//data: array di dati
+//used: numero di dati usati nell'array
+float media_int(int data[], int used);
 
-//dev. std. di n-upla con n = n_data
-// ritorna la dev standard
-float devstd(int data[], int n_data);
+//media di un array di float con used come numero di dati usati
+//data: array di dati
+//used: numero di dati usati nell'array
+float media_float(float data[], int used);
+
+//dev. std. di array di int con int used come numero di dati usati
+//data: array di dati
+//used: numero di dati usati nell'array
+float devstd_int(int data[], int used);
+
+//dev. std. di array di float con int used come numero di dati usati
+//data: array di dati
+//used: numero di dati usati nell'array
+float devstd_float(int data[], int used);
 
 //restituisce se un val e' |val-media| > 3stdDev
-bool is_outlier(int val, float media, float std_dev);
+//val: float del valore 
+//media: media del campione di dati
+//std_dev: deviazione standard di dati
+bool is_outlier(float val, float media, float std_dev);
 
-//restituisce la mediana di un insieme ordinato
+//restituisce la mediana di un insieme ordinato di float
+//data: array di float
+//used: int che indica il num di elementi usati
 float mediana(float data[], int used);
