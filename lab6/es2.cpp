@@ -25,7 +25,6 @@ int main(){
         used ++;
     }
 
-    cout << used << endl;
     //calcola media e dev standard
     
     
