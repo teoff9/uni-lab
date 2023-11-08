@@ -3,12 +3,36 @@
 #include <iostream>
 using namespace std;
 #include <fstream>
-//#include "../lib/stats/stats.h"
+#include <cmath>
 
 #define NN 150
 
+//Funzione che restituisce la media dei valori vdiams riferiti al colore
+// vdiams e vcols, array contenenti diametri e char b,g,r
+// used: numero di dati in vdiams, vcols
+// c: char di cui vogliamo fare la media dei diametri
+float media_by_char(float vdiams[], char vcols[], int used, char c);
+
+//Funzione che restituisce la dev std dei valori vdiams riferiti al colore
+// vdiams e vcols, array contenenti diametri e char b,g,r
+// used: numero di dati in vdiams, vcols
+// c: char di cui vogliamo fare la dev std dei diametri
+float dev_std_by_char(float vdiams[], char vcols[], int used, char c);
+
+//Funzione che ordini i valori: b < g < r
+// vdiams e vcols, array contenenti diametri e char b,g,r
+// used: numero di dati in vdiams, vcols
+void sorting_spheres(float vdiams[], char vcols[], int used);
+
+//Selection sort by char
+// vdiams e vcols, array contenenti diametri e char b,g,r
+// used: numero di dati in vdiams, vcols
+// c: char used to filter
+void selection_sort_by_char(float vdiams[], char vcols[], int used, char c);
+
 int main(){
     ifstream data;
+    ofstream out;
     float vdiams[NN];
     char vcols[NN];
     int used = 0;
@@ -21,12 +45,67 @@ int main(){
     }
 
     //carica i dati nei due array con un ciclo spoletini
-    while (used < 150 && data >> vdiams[used -1] && data >> vcols[used - 1]){
+    while (used < 150 && data >> vdiams[used] && data >> vcols[used]){
         used ++;
     }
+    data.close();
 
     //calcola media e dev standard
-    
-    
+    float m_r = media_by_char(vdiams, vcols, used, 'r');
+    float dev_r = dev_std_by_char(vdiams, vcols, used, 'r');
+    float m_b = media_by_char(vdiams, vcols, used, 'b');
+    float dev_b = dev_std_by_char(vdiams, vcols, used, 'b');
+    float m_g = media_by_char(vdiams, vcols, used, 'g');
+    float dev_g = dev_std_by_char(vdiams, vcols, used, 'g');
+
+    //print
+    cout << m_r << " " << dev_r << endl;
+    cout << m_b << " " << dev_b << endl;
+    cout << m_g << " " << dev_g << endl;
+
+    //sorting e output in differente file
+    sorting_spheres(vdiams, vcols, used);
+
+
     return 0;
 }
+
+
+
+//Definizioni
+float media_by_char(float vdiams[], char vcols[], int used, char c){
+    float sum = 0;
+    int N = 0;
+    for (int i = 0; i < used; i++){
+        if (vcols[i] == c){
+            sum += vdiams[i];
+            N++;
+        }
+    }
+    return sum/N;
+}
+
+
+float dev_std_by_char(float vdiams[], char vcols[], int used, char c){
+    float media = media_by_char(vdiams, vcols, used, c);
+    float sum = 0;
+    int N = 0;
+    for (int i = 0; i < used; i++){
+        if (vcols[i] == c){
+            sum += powf(vdiams[i]-media, 2.0);
+            N++;
+        }
+    }
+
+    return powf(sum/N, 0.5);
+}
+
+
+void sorting_spheres(float vdiams[], char vcols[], int used){
+    for (char c : {'b', 'r', 'g'}){
+        selection_sort_by_char(vdiams, vcols, used, c);
+    }
+
+
+}
+
