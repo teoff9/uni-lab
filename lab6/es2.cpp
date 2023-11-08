@@ -20,28 +20,20 @@ float media_by_char(float vdiams[], char vcols[], int used, char c);
 // c: char di cui vogliamo fare la dev std dei diametri
 float dev_std_by_char(float vdiams[], char vcols[], int used, char c);
 
-//Funzione che ordini i valori: b < g < r
+//Funzione che ordini i valori: b < g < r con i valori di vdiams
 // vdiams e vcols, array contenenti diametri e char b,g,r
 // used: numero di dati in vdiams, vcols
 void sorting_spheres(float vdiams[], char vcols[], int used);
 
-//Selection sort by char
-// vdiams e vcols, array contenenti diametri e char b,g,r
-// used: numero di dati in vdiams, vcols
-// c: char used to filter
-void selection_sort_by_char(float vdiams[], char vcols[], int used, char c);
-
-//Pos of min by char
+//Pos of min 
 //vdiams and vcols: vectors of floats and chars
 //int i: initial index of the search
 //int j: final index of the search
-// char c: discriminante
-int pos_of_min_by_char(float vdiams[], char vcols[], int i, int j, char c);
+int pos_of_min(float vdiams[], char vcols[], int i, int j);
 
-//Counts the number of times char c is in vcols
-//vcols: array of char
-//int used: used of vcols
-int count_char(char vcols[], int used, char c);
+
+void sorting(float vdiams[], char vcols[], int used);
+
 
 int main(){
     ifstream data;
@@ -120,28 +112,24 @@ float dev_std_by_char(float vdiams[], char vcols[], int used, char c){
 
 
 void sorting_spheres(float vdiams[], char vcols[], int used){
-    for (char c : {'b', 'g', 'r'}){
-        selection_sort_by_char(vdiams, vcols, used, c);
-    }
-}
-
-void selection_sort_by_char(float vdiams[], char vcols[], int used, char c){
     for (int i = 0; i<used -1; i++){
-        int k = pos_of_min_by_char(vdiams, vcols, i, used-1, c);
-        if (k!=-1){
-            std::swap(vdiams[i], vdiams[k]);
-            std::swap(vcols[i], vcols[k]);
-        }        
+        int k = pos_of_min(vdiams, vcols, i, used);
+        std::swap(vdiams[i], vdiams[k]);
+        std::swap(vcols[i], vcols[k]);
     }
+
 }
 
-int pos_of_min_by_char(float vdiams[], char vcols[], int i, int j, char c){
-    int k = -1;
-    float min = vdiams[i];
+
+int pos_of_min(float vdiams[], char vcols[], int i, int j){
+    int k = 0;
+    float d_min = vdiams[i];
+    char c_min = vcols[i];
     for (i; i<j; i++){
-        if (vcols[i] == c && vdiams[i]<=min){
+        if (vdiams[i]<=d_min && vcols[i]<=c_min){
             k = i;
-            min = vdiams[i];
+            d_min = vdiams[i];
+            c_min = vcols[i];
         }
     }
     return k;
