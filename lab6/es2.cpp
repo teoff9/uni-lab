@@ -5,7 +5,6 @@ using namespace std;
 #include <fstream>
 #include <cmath>
 
-#include "dbg.h"
 
 #define NN 150
 
@@ -52,7 +51,7 @@ int main(){
     int used = 0;
 
     //apri data
-    data.open("data/sfere1.dat");
+    data.open("data/sfere.dat");
     if (data.fail()){
         cout << "Failed to read file" << endl;
         return -1;
@@ -121,20 +120,17 @@ float dev_std_by_char(float vdiams[], char vcols[], int used, char c){
 
 
 void sorting_spheres(float vdiams[], char vcols[], int used){
-    for (char c : {'b', 'r', 'g'}){
+    for (char c : {'b', 'g', 'r'}){
         selection_sort_by_char(vdiams, vcols, used, c);
     }
 }
 
 void selection_sort_by_char(float vdiams[], char vcols[], int used, char c){
-    dbg_array(vdiams, vcols, used);
-    int n = count_char(vcols, used, c);
-    for (int i = 0; i<n; i++){
+    for (int i = 0; i<used -1; i++){
         int k = pos_of_min_by_char(vdiams, vcols, i, used-1, c);
         if (k!=-1){
             std::swap(vdiams[i], vdiams[k]);
             std::swap(vcols[i], vcols[k]);
-            dbg_array(vdiams, vcols, used);
         }        
     }
 }
@@ -148,15 +144,5 @@ int pos_of_min_by_char(float vdiams[], char vcols[], int i, int j, char c){
             min = vdiams[i];
         }
     }
-    cout << "k = " << k << endl;
     return k;
-}
-
-int count_char(char vcols[], int used, char c){
-    int n = 0;
-    for (int i = 0; i< used; i++){
-        if (vcols[i] == c) n++;
-    }
-
-    return n;
 }
