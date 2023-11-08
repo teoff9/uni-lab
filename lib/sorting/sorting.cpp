@@ -4,7 +4,7 @@
 
 
 int pos_of_min(float data[], int i, int j){
-    int k;
+    int k = 0;
     float min = data[i];
     for(i; i<=j; i++){
         if (data[i]<= min){
