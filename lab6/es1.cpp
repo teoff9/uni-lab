@@ -47,7 +47,7 @@ int main(){
         cout << "Valore " << i << ": " << data[i] << endl;
         out << data[i] << endl;
     }
-    for (int i=99; i>96; i--){
+    for (int i=used; i>used-3; i--){
         cout << "Valore " << i << ": " << data[i] << endl;
         out << data[i] << endl;
     }
