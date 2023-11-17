@@ -2,6 +2,7 @@
 
 //Definizioni delle funzioni presenti in spoletini.h
 
+#include "spoletini.h"
 #include <fstream>
 #include <iostream>
 using namespace std;
