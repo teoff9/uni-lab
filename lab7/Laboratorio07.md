@@ -49,10 +49,10 @@ che, contati i dati presenti sul file di nome __nomefile__, carichi gli __ndati_
 Scrivere un programma che produca un istogramma (artigianale eh...) facendo quanto segue:
 
 1. Chiedere  all'utente di definire un intervallo $[\text{min},\text{max}]$  con $\text{min} < \text{max}$ e un numero $\text{nbins}$ di intervalli in cui dividere $[\text{min},\text{max}]$. A questo punto avremo identificato gli intervalli $[x_0 = \text{min}, x_1 = \text{min}+\delta]$, $(x_1,x_2 = \text{min}+2 \cdot \delta ]$,$\ldots$, $(x_{\text{nbins}-1},  x_N = \text{min}+ \text{nbins} \cdot \delta]$, dove
+
 ```math
 \delta  = \frac{\text{max} - \text{min}}{\text{nbins}}.
 ```
-
 
  Notate che tutti gli intervalli, tranne il primo, sono aperti a sinistra, e che formano una partizione di $[\text{min},\text{max}]$.
 
