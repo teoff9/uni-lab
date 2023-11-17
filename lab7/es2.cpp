@@ -14,7 +14,7 @@ int main(){
     ifstream inp;
     ofstream out;
     int used;
-    float* data;
+    float* data = NULL;
     float min, max, median, med, stddev;
 
     //leggi il numero di dati
