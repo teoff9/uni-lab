@@ -2,6 +2,7 @@
 // Definizioni delle funzioni
 
 #include <cmath>
+#include "numbers.h"
 
 void crivello_eratostene(bool v[], int max, int* n){
     
