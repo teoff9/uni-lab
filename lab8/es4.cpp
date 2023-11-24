@@ -5,16 +5,9 @@
 using namespace std;
 #include "../lib/numbers/numbers.h"
 #include "../lib/spoletini/spoletini.h"
-#include "../lib/edit_array/edit_array.h"
 
 //delete entry
-void delete_entry(int i, int data[], int* used, bool p[], int* u_p, bool s[], int* u_s);
-
-void init_false(bool v[], int used){
-    for (int i = 0; i< used; i++){
-        v[i] = false;
-    }
-}
+void delete_entry(int i, int data[], int* used, bool p[],  bool s[]);
 
 int main(){
     ifstream inp;
@@ -34,32 +27,33 @@ int main(){
     //popola isPrime e isSquare
     isPrime = new bool[used];
     isSquare = new bool[used];
-    init_false(isPrime, used);
-    init_false(isSquare, used);
+    for (int i = 0; i< used; i++){
+        isPrime[i] = false;
+        isSquare[i] = false;
+    }
     for (int i = 0; i< used; i++){
         if (is_prime(data[i])) isPrime[i] = true;
         if (is_perfect_square(data[i])) isSquare[i] = true;
     }
 
-
     //elimina dal vettore data tutti i num
     //non primi e non quadrati perfetti
-    int u_prime = used;
-    int u_square = used;
-    int u = used;
-    for (int i = 0; i<u; i++){
+    for (int i = 0; i<used; i++){
         if (!isPrime[i] && !isSquare[i]){
-            delete_entry(i,data, &used,isPrime, &u_prime, isSquare, &u_square);
+            cout << data[i] << endl;
+            delete_entry(i, data, &used, isPrime, isSquare);
+            i --;
         }
     }
-    cout << used << endl << u_prime << endl << u_square << endl;
+
 
     //stampa a video e su risultati.dat i valori sopravvissuti
     out.open("data/output/risultati.dat");
     for (int i = 0; i < used; i++){
-        //cout << data[i] << "    " << isPrime[i] << "    " << isSquare[i] << endl;
+        cout << data[i] << "    " << isPrime[i] << "    " << isSquare[i] << endl;
         out << data[i] << "    " << isPrime[i] << "    " << isSquare[i] << endl;
     }
+    out.close();
 
     //pulisci tutti gli array
     delete []data; delete []isPrime; delete []isSquare;
@@ -69,8 +63,19 @@ int main(){
     return 0;
 }
 
-void delete_entry(int i, int data[], int* used, bool p[], int* u_p, bool s[], int* u_s){
-    delete_entry_shift_bool(p, u_p, i);
-    delete_entry_shift_bool(s, u_s, i);
-    delete_entry_shift_int(data, used, i);
+void delete_entry(int i, int data[], int* used, bool p[],  bool s[]){
+    int u_p = *used;
+    int u_s = *used;
+    
+    if (i>= 0 && i<=(*used)-1){
+        for (int j = i; i < (*used)-1; i++ ){
+            std::swap(data[i], data[i+1]);
+            std::swap(p[i], p[i+1]);
+            std::swap(s[i], s[i+1]);
+        }
+        (*used) -= 1;
+
+    } else {
+        cout << "Eliminazione non possibile: indice fuori range: i = " << i << " used = " << used << endl;
+    }
 }
