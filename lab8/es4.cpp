@@ -5,6 +5,7 @@
 using namespace std;
 #include "../lib/numbers/numbers.h"
 #include "../lib/spoletini/spoletini.h"
+#include "../lib/edit_array/edit_array.h"
 
 //delete entry
 void delete_entry(int i, int data[], int* used, bool p[],  bool s[]);
@@ -67,15 +68,7 @@ void delete_entry(int i, int data[], int* used, bool p[],  bool s[]){
     int u_p = *used;
     int u_s = *used;
     
-    if (i>= 0 && i<=(*used)-1){
-        for (int j = i; i < (*used)-1; i++ ){
-            std::swap(data[i], data[i+1]);
-            std::swap(p[i], p[i+1]);
-            std::swap(s[i], s[i+1]);
-        }
-        (*used) -= 1;
-
-    } else {
-        cout << "Eliminazione non possibile: indice fuori range: i = " << i << " used = " << used << endl;
-    }
+    delete_entry_swap_int(data, used, i);
+    delete_entry_swap_bool(p, &u_p, i);
+    delete_entry_swap_bool(s, &u_s, i);
 }
