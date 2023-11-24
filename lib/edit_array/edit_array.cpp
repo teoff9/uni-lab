@@ -29,7 +29,7 @@ void delete_entry_swap_float(float v[], int* used, int where){
     }
 }
 
-void delete_entry_swap_bool(float v[], int* used, int where){
+void delete_entry_swap_bool(bool v[], int* used, int where){
     if (where>= 0 && where<=(*used)-1){
         std::swap(v[where], v[(*used)-1]);
         (*used) -= 1;
@@ -39,7 +39,7 @@ void delete_entry_swap_bool(float v[], int* used, int where){
     }
 }
 
-void delete_entry_swap_int(float v[], int* used, int where){
+void delete_entry_swap_int(int v[], int* used, int where){
     if (where>= 0 && where<=(*used)-1){
         std::swap(v[where], v[(*used)-1]);
         (*used) -= 1;
