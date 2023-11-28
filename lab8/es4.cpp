@@ -15,7 +15,7 @@ int main(){
     ofstream out;
     int used = 0;
     char n_f[16] = "data/interi.dat";
-    int* data = spoletini_file_int(n_f, &used);
+    int* data = spoletini_file_int(n_f, used);
     bool* isPrime = NULL;
     bool* isSquare = NULL;
 
@@ -41,7 +41,6 @@ int main(){
     //non primi e non quadrati perfetti
     for (int i = 0; i<used; i++){
         if (!isPrime[i] && !isSquare[i]){
-            cout << data[i] << endl;
             delete_entry(i, data, &used, isPrime, isSquare);
             i --;
         }

@@ -5,7 +5,7 @@
 using namespace std;
 
 int main(){
-    int* v;
+    int* v = NULL;
     int used;
 
     v = spoletini_file_int("data/interi.dat", used);
@@ -14,6 +14,9 @@ int main(){
         cout << v[i] << endl;
     }
     cout << used << endl;
+
+    delete []v;
+    v = NULL;
 
     return 0;
 }
