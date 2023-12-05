@@ -34,11 +34,12 @@ array_int load_interi(char file_name[], int& err_code){
     v.size = 0;
     v.used = 0;
     v.raw = NULL;
+    err_code = 0;
 
     inp.open(file_name);
     if (inp.fail()){
         cout << "Failed to load interi" << endl;
-        err_code = 1;
+        err_code = -1;
         return v;
     }
 
@@ -48,17 +49,16 @@ array_int load_interi(char file_name[], int& err_code){
     inp.close();
 
     v.raw = new int[v.size];
+    if (v.raw == NULL) {
+        err_code = -2;
+        return v;
+    }
     
     inp.open(file_name);
 
     for (int i = 0; i < v.size; i++){
         inp >> v.raw[i];
         v.used++;
-    }
-    if (v.size != v.used){
-        err_code = 2;
-    } else {
-        err_code = 0;
     }
 
     return v;
