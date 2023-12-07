@@ -2,6 +2,9 @@
 //Contiene le dichiarazioni della libreria
 //per generare numeri casuali
 
+//Funzione che genera un un numero tra 0 e 1
+double rand_n();
+
 //Funzione per generare un numero random nell'intervallo:
 //double min : min
 //double max : max

@@ -9,14 +9,18 @@
 using namespace std;
 #define PI 3.14159
 
+double rand_n() {
+    return (double)rand() / RAND_MAX;
+}
+
 double rand_uniform(double min, double max) { 
     
-    return (max - min)*((double)rand()/RAND_MAX) + min;
+    return (max - min)*rand_n() + min;
 }
 
 double rand_gaussian(double median, double dev_std) {
-    double u1 = (double) rand()/RAND_MAX;
-    double u2 = (double) rand()/RAND_MAX;
+    double u1 = rand_n();
+    double u2 = rand_n();
     double N = sqrt(-2*log(u1))*cos(2*PI*u2);
 
     return  median + dev_std*N;
