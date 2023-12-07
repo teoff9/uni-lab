@@ -53,6 +53,11 @@ array_int load_interi(char file_name[], int& err_code){
         err_code = -2;
         return v;
     }
+
+    if (v.raw == NULL) {
+        err_code = -2;
+        return v;
+    }
     
     inp.open(file_name);
 
