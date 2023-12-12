@@ -9,7 +9,7 @@ using namespace std;
 array_int load_array_int(char file_name[], int& err_code){
     array_int v;
     ifstream inp;
-    int tmp;
+    int tmp = 0;
     int supp_size = 100;
 
     v.size = 0;
@@ -33,9 +33,10 @@ array_int load_array_int(char file_name[], int& err_code){
 
     while (inp >> tmp) {
         if (v.size == v.used) {
-            resize_array_int(v, supp_size * 2);
+            resize_array_int(v, v.size * 2);
         }
         v.raw[v.used] = tmp;
+        cout << tmp << endl;
         v.used ++;
     }
     resize_array_int(v, v.used);
@@ -71,7 +72,7 @@ array_float load_array_float(char file_name[], int& err_code){
 
     while (inp >> tmp) {
         if (v.size == v.used) {
-            resize_array_float(v, supp_size * 2);
+            resize_array_float(v, v.size * 2);
         }
         v.raw[v.used] = tmp;
         v.used ++;
@@ -109,7 +110,7 @@ array_double load_array_double(char file_name[], int& err_code){
 
     while (inp >> tmp) {
         if (v.size == v.used) {
-            resize_array_double(v, supp_size * 2);
+            resize_array_double(v, v.size * 2);
         }
         v.raw[v.used] = tmp;
         v.used ++;
@@ -211,4 +212,31 @@ int resize_array_double(array_double &myA, int new_size) {
     } 
 
     return 0;
+}
+
+int search_value_int(array_int arr, int value){
+    for (int i = 0; i < arr.used; i++) {
+        if (arr.raw[i] == value) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+int search_value_float(array_float arr, float value){
+    for (int i = 0; i < arr.used; i++) {
+        if (arr.raw[i] == value) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+int search_value_double(array_double arr, double value){
+    for (int i = 0; i < arr.used; i++) {
+        if (arr.raw[i] == value) {
+            return i;
+        }
+    }
+    return -1;
 }

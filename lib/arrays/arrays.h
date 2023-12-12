@@ -41,3 +41,12 @@ int resize_array_float(array_float &myA, int new_size);
 //ridimensiona array di double, 
 //restituisce 0 se tutto bene -1 se va male
 int resize_array_double(array_double &myA, int new_size);
+
+//ricerca valore in array int, restituisce l'indice
+int search_value_int(array_int arr, int value);
+
+//ricerca valore in array float, restituisce l'indice
+int search_value_float(array_float arr, float value);
+
+//ricerca valore in array double, restituisce l'indice
+int search_value_double(array_double arr, double value);
