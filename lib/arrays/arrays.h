@@ -36,8 +36,8 @@ int resize_array_int(array_int &myA, int new_size);
 
 //ridimensiona array di float, 
 //restituisce 0 se tutto bene -1 se va male
-int resize_array_int(array_float &myA, int new_size);
+int resize_array_float(array_float &myA, int new_size);
 
 //ridimensiona array di double, 
 //restituisce 0 se tutto bene -1 se va male
-int resize_array_int(array_double &myA, int new_size);
+int resize_array_double(array_double &myA, int new_size);

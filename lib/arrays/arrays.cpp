@@ -6,53 +6,11 @@
 #include <iostream>
 using namespace std;
 
-array_int load_interi(char file_name[], int& err_code){
-    array_int v;
-    ifstream inp;
-    int tmp;
-
-    v.size = 0;
-    v.used = 0;
-    v.raw = NULL;
-    err_code = 0;
-
-    inp.open(file_name);
-    if (inp.fail()){
-        cout << "Failed to load interi" << endl;
-        err_code = -1;
-        return v;
-    }
-
-    while (inp >> tmp) {
-        v.size++;
-    }
-    inp.close();
-
-    v.raw = new int[v.size];
-    if (v.raw == NULL) {
-        err_code = -2;
-        return v;
-    }
-
-    if (v.raw == NULL) {
-        err_code = -2;
-        return v;
-    }
-    
-    inp.open(file_name);
-
-    for (int i = 0; i < v.size; i++){
-        inp >> v.raw[i];
-        v.used++;
-    }
-
-    return v;
-}
-
 array_int load_array_int(char file_name[], int& err_code){
     array_int v;
     ifstream inp;
     int tmp;
+    int supp_size = 100;
 
     v.size = 0;
     v.used = 0;
@@ -66,28 +24,22 @@ array_int load_array_int(char file_name[], int& err_code){
         return v;
     }
 
+    v.raw = new int[supp_size];
+    if (v.raw == NULL) {
+        err_code = -2;
+        return v;
+    }
+    v.size = supp_size;
+
     while (inp >> tmp) {
-        v.size++;
+        if (v.size == v.used) {
+            resize_array_int(v, supp_size * 2);
+        }
+        v.raw[v.used] = tmp;
+        v.used ++;
     }
+    resize_array_int(v, v.used);
     inp.close();
-
-    v.raw = new int[v.size];
-    if (v.raw == NULL) {
-        err_code = -2;
-        return v;
-    }
-
-    if (v.raw == NULL) {
-        err_code = -2;
-        return v;
-    }
-    
-    inp.open(file_name);
-
-    for (int i = 0; i < v.size; i++){
-        inp >> v.raw[i];
-        v.used++;
-    }
 
     return v;
 }
@@ -96,6 +48,7 @@ array_float load_array_float(char file_name[], int& err_code){
     array_float v;
     ifstream inp;
     float tmp;
+    int supp_size = 100;
 
     v.size = 0;
     v.used = 0;
@@ -109,28 +62,22 @@ array_float load_array_float(char file_name[], int& err_code){
         return v;
     }
 
+    v.raw = new float[supp_size];
+    if (v.raw == NULL) {
+        err_code = -2;
+        return v;
+    }
+    v.size = supp_size;
+
     while (inp >> tmp) {
-        v.size++;
+        if (v.size == v.used) {
+            resize_array_float(v, supp_size * 2);
+        }
+        v.raw[v.used] = tmp;
+        v.used ++;
     }
+    resize_array_float(v, v.used);
     inp.close();
-
-    v.raw = new float[v.size];
-    if (v.raw == NULL) {
-        err_code = -2;
-        return v;
-    }
-
-    if (v.raw == NULL) {
-        err_code = -2;
-        return v;
-    }
-    
-    inp.open(file_name);
-
-    for (int i = 0; i < v.size; i++){
-        inp >> v.raw[i];
-        v.used++;
-    }
 
     return v;
 }
@@ -139,6 +86,7 @@ array_double load_array_double(char file_name[], int& err_code){
     array_double v;
     ifstream inp;
     double tmp;
+    int supp_size = 100;
 
     v.size = 0;
     v.used = 0;
@@ -152,32 +100,25 @@ array_double load_array_double(char file_name[], int& err_code){
         return v;
     }
 
+    v.raw = new double[supp_size];
+    if (v.raw == NULL) {
+        err_code = -2;
+        return v;
+    }
+    v.size = supp_size;
+
     while (inp >> tmp) {
-        v.size++;
+        if (v.size == v.used) {
+            resize_array_double(v, supp_size * 2);
+        }
+        v.raw[v.used] = tmp;
+        v.used ++;
     }
+    resize_array_double(v, v.used);
     inp.close();
-
-    v.raw = new double[v.size];
-    if (v.raw == NULL) {
-        err_code = -2;
-        return v;
-    }
-
-    if (v.raw == NULL) {
-        err_code = -2;
-        return v;
-    }
-    
-    inp.open(file_name);
-
-    for (int i = 0; i < v.size; i++){
-        inp >> v.raw[i];
-        v.used++;
-    }
 
     return v;
 }
-
 
 int resize_array_int(array_int &myA, int new_size){
     int* new_array = NULL;
@@ -210,7 +151,6 @@ int resize_array_int(array_int &myA, int new_size){
     return 0;
 }
 
-
 int resize_array_float(array_float &myA, int new_size){
     float* new_array = NULL;
     new_array = new float[new_size];
@@ -241,7 +181,6 @@ int resize_array_float(array_float &myA, int new_size){
 
     return 0;
 }
-
 
 int resize_array_double(array_double &myA, int new_size) {
     double* new_array = NULL;
