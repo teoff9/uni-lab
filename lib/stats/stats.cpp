@@ -4,47 +4,68 @@
 #include "stats.h"
 
  
-float media_int(int data[], int n_data){
+float media_int(int data[], int used){
     float sum = 0;
-    for (int i=0; i <n_data; i++){
+    for (int i=0; i <used; i++){
         sum += (float)data[i];
     }
 
-    return sum/n_data;
+    return sum/used;
 }
 
 
-float media_float(float data[], int n_data){
+float media_float(float data[], int used){
     float sum = 0;
-    for (int i=0; i <n_data; i++){
+    for (int i=0; i <used; i++){
         sum += data[i];
     }
 
-    return sum/n_data;
+    return sum/used;
 }
 
 
-float devstd_int(int data[], int n_data){
-    float m = media_int(data, n_data);
+double media_double(double data[], int used){
+    double sum = 0;
+    for (int i=0; i <used; i++){
+        sum += data[i];
+    }
+
+    return sum/used;
+}
+
+
+float devstd_int(int data[], int used){
+    float m = media_int(data, used);
     float numeratore = 0;
-    for (int i = 0; i < n_data; i++){
+    for (int i = 0; i < used; i++){
         numeratore += pow((data[i]-m), 2);
     }
-    return sqrt(numeratore/(n_data-1));
+    return sqrt(numeratore/(used-1));
 }
 
 
-float devstd_float(float data[], int n_data){
-    float m = media_float(data, n_data);
+float devstd_float(float data[], int used){
+    float m = media_float(data, used);
     float numeratore = 0;
-    for (int i = 0; i < n_data; i++){
+    for (int i = 0; i < used; i++){
         numeratore += pow((data[i]-m), 2);
     }
-    return sqrt(numeratore/(n_data-1));
+    return sqrt(numeratore/(used-1));
 }
 
 
-bool is_outlier(float val, float media, float std_dev){
+double devstd_double(double data[], int used){
+    double m = media_double(data, used);
+    double numeratore = 0;
+    for (int i = 0; i < used; i++){
+        numeratore += pow((data[i]-m), 2);
+    }
+    return sqrt(numeratore/(used-1));
+}
+
+
+
+bool is_outlier_float(float val, float media, float std_dev){
     if (fabs(val-media)> 3*std_dev){
         return true;
     } else {
@@ -54,7 +75,7 @@ bool is_outlier(float val, float media, float std_dev){
 }
 
 
-float mediana(float data[], int used){
+float mediana_float(float data[], int used){
     if (used%2 != 0){
         return data[(used-1)/2];
     } else {
