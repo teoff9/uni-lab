@@ -3,7 +3,7 @@
 #include "sorting.h"
 
 
-int pos_of_min(float data[], int i, int j){
+int pos_of_min_float(float data[], int i, int j){
     int k = 0;
     float min = data[i];
     for(i; i<=j; i++){
@@ -17,10 +17,59 @@ int pos_of_min(float data[], int i, int j){
 }
 
 
-void selection_sort(float data[], int n_data){
+void selection_sort_float(float data[], int n_data){
     for (int i = 0; i < n_data -1; i++){
-        int k = pos_of_min(data, i, n_data-1);
+        int k = pos_of_min_float(data, i, n_data-1);
         float tmp = data[k];
+        data[k] = data[i];
+        data[i] = tmp;
+    }
+}
+
+
+int pos_of_min_int(int data[], int i, int j){
+    int k = 0;
+    int min = data[i];
+    for(i; i<=j; i++){
+        if (data[i]<= min){
+            k = i;
+            min = data[i];
+        }
+    }
+
+    return k;
+}
+
+
+void selection_sort_int(int data[], int n_data){
+    for (int i = 0; i < n_data -1; i++){
+        int k = pos_of_min_int(data, i, n_data-1);
+        int tmp = data[k];
+        data[k] = data[i];
+        data[i] = tmp;
+    }
+
+}
+
+
+int pos_of_min_double(double data[], int i, int j){
+    int k = 0;
+    double min = data[i];
+    for(i; i<=j; i++){
+        if (data[i]<= min){
+            k = i;
+            min = data[i];
+        }
+    }
+
+    return k;
+}
+
+
+void selection_sort_double(double data[], int n_data){
+    for (int i = 0; i < n_data -1; i++){
+        int k = pos_of_min_double(data, i, n_data-1);
+        double tmp = data[k];
         data[k] = data[i];
         data[i] = tmp;
     }
