@@ -171,7 +171,7 @@ void merge_floats(float data[], int i, int m, int f){
     }
 
     delete []tmp;
-    tmp = nullptr;
+    tmp = NULL;
 }
 
 
@@ -225,7 +225,7 @@ void merge_doubles(double data[], int i, int m, int f){
     }
 
     delete []tmp;
-    tmp = nullptr;
+    tmp = NULL;
 }
 
 
