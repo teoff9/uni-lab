@@ -240,3 +240,43 @@ int search_value_double(array_double arr, double value){
     }
     return -1;
 }
+
+void delete_element_int(array_int &arr, int where){
+    if (where>= 0 && where<= arr.used-1){
+        for (int i = where; i < arr.used-1; i++ ){
+            int tmp = arr.raw[i];
+            arr.raw[i] = arr.raw[i+1];
+            arr.raw[i=1] = tmp;
+        }
+        arr.used -= 1;
+    } else {
+        cout << "Eliminazione non possibile: indice fuori range" << endl;
+    }
+}
+
+void delete_element_float(array_float &arr, int where){
+    if (where>= 0 && where<= arr.used-1){
+        for (int i = where; i < arr.used-1; i++ ){
+            float tmp = arr.raw[i];
+            arr.raw[i] = arr.raw[i+1];
+            arr.raw[i+1] = tmp;
+        }
+        arr.used -= 1;
+    } else {
+        cout << "Eliminazione non possibile: indice fuori range" << endl;
+    }
+}
+
+
+void delete_element_double(array_double &arr, int where){
+    if (where>= 0 && where<= arr.used-1){
+        for (int i = where; i < arr.used-1; i++ ){
+            double tmp = arr.raw[i];
+            arr.raw[i] = arr.raw[i+1];
+            arr.raw[i+1] = tmp;
+        }
+        arr.used -= 1;
+    } else {
+        cout << "Eliminazione non possibile: indice fuori range" << endl;
+    }
+}

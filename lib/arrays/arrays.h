@@ -50,3 +50,12 @@ int search_value_float(array_float arr, float value);
 
 //ricerca valore in array double, restituisce l'indice
 int search_value_double(array_double arr, double value);
+
+//elimina valore di posizione i dell'array
+void delete_element_int(array_int &arr, int where);
+
+//elimina valore di posizione where dell'array
+void delete_element_float(array_float &arr, int where);
+
+//elimina valore di posizione where dell'array
+void delete_element_double(array_double &arr, int where);
