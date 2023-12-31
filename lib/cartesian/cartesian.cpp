@@ -44,5 +44,3 @@ array_pointsR2 load_pointsR2_from_file(char nome_file[], int& err_code){
     }
 
 }
-
-

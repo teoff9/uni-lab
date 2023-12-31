@@ -1,6 +1,7 @@
 //27.10.2023 by Matteo Fava
 
 #include "sorting.h"
+#include <cstddef>
 
 
 int pos_of_min_float(float data[], int i, int j){
@@ -79,7 +80,7 @@ void selection_sort_double(double data[], int used){
 
 void merge_ints(int data[], int i, int m, int f){
     int j, k, z;
-    int* tmp; 
+    int* tmp = NULL; 
     tmp = new int[f-i+1];
 
     j = i; //indice del primo sottovettore
@@ -116,8 +117,9 @@ void merge_ints(int data[], int i, int m, int f){
     }
 
     delete []tmp;
-    tmp = nullptr;
+    tmp = NULL;
 }
+
 
 void merge_sort_int(int data[], int init, int final){
     int m;

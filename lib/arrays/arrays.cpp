@@ -267,7 +267,6 @@ void delete_element_float(array_float &arr, int where){
     }
 }
 
-
 void delete_element_double(array_double &arr, int where){
     if (where>= 0 && where<= arr.used-1){
         for (int i = where; i < arr.used-1; i++ ){

@@ -18,7 +18,6 @@ void delete_entry_shift_float(float v[], int* used, int where){
     }
 }
 
-
 void delete_entry_swap_float(float v[], int* used, int where){
     if (where>= 0 && where<=(*used)-1){
         std::swap(v[where], v[(*used)-1]);

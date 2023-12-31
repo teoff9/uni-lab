@@ -64,7 +64,6 @@ double devstd_double(double data[], int used){
 }
 
 
-
 bool is_outlier_float(float val, float media, float std_dev){
     if (fabs(val-media)> 3*std_dev){
         return true;
