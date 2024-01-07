@@ -246,7 +246,7 @@ void delete_element_int(array_int &arr, int where){
         for (int i = where; i < arr.used-1; i++ ){
             int tmp = arr.raw[i];
             arr.raw[i] = arr.raw[i+1];
-            arr.raw[i=1] = tmp;
+            arr.raw[i+1] = tmp;
         }
         arr.used -= 1;
     } else {
