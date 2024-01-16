@@ -51,8 +51,8 @@ void delete_entry_shift_int(int v[], int &used, int where){
 void delete_entry_swap_float(float v[], int &used, int where){
     if (where>= 0 && where<=used-1){
             float tmp = v[where];
-            v[where] = v[where+1];
-            v[where+1] = v[where];
+            v[where] = v[used-1];
+            v[used-1] = v[where];
         used -= 1;
 
     } else {
@@ -63,8 +63,8 @@ void delete_entry_swap_float(float v[], int &used, int where){
 void delete_entry_swap_bool(bool v[], int &used, int where){
     if (where>= 0 && where<=used-1){
         bool tmp = v[where];
-        v[where] = v[where+1];
-        v[where+1] = v[where];
+        v[where] = v[used-1];
+        v[used-1] = v[where];
         used -= 1;
 
     } else {
@@ -75,8 +75,8 @@ void delete_entry_swap_bool(bool v[], int &used, int where){
 void delete_entry_swap_int(int v[], int &used, int where){
     if (where>= 0 && where<=used-1){
         int tmp = v[where];
-        v[where] = v[where+1];
-        v[where+1] = v[where];
+        v[where] = v[used-1];
+        v[used-1] = v[where];
         used -= 1;
 
     } else {
