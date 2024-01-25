@@ -1,0 +1,42 @@
+Caricati da file 4 ioni
+Descrizione ioni: 
+X = -1.2 | Y = -1.3 | R = 0.2 | Carica = 10
+X = 1.4 | Y = -1.2 | R = 0.3 | Carica = 15
+X = 1.3 | Y = 1.7 | R = 0.4 | Carica = 14
+X = -1 | Y = 2.1 | R = 0.5 | Carica = 18
+
+Numero di elettroni caricati da file 47
+Primi 5 elettroni: 
+X = 2.21 | Y = 1.93 | Vx = 0 | Vy = 0 | Free = 1
+X = -0.83 | Y = 1.06 | Vx = 0 | Vy = 0 | Free = 1
+X = 2.1 | Y = 0.83 | Vx = 0 | Vy = 0 | Free = 1
+X = 3.14 | Y = 1.5 | Vx = 0 | Vy = 0 | Free = 1
+X = 1.59 | Y = 0.36 | Vx = 0 | Vy = 0 | Free = 1
+Ultimi 5 elettroni: 
+X = 1.98 | Y = -0.63 | Vx = 0 | Vy = 0 | Free = 1
+X = 1.26 | Y = -2.32 | Vx = 0 | Vy = 0 | Free = 1
+X = 1.17 | Y = -0.83 | Vx = 0 | Vy = 0 | Free = 1
+X = 0.32 | Y = -1.95 | Vx = 0 | Vy = 0 | Free = 1
+X = 1.13 | Y = -0.52 | Vx = 0 | Vy = 0 | Free = 1
+
+Catturati 7 elettroni al tempo t=0 e rimasti liberi 40
+Ioni aggiornati: 
+X = -1.2 | Y = -1.3 | R = 0.2 | Carica = 10
+X = 1.4 | Y = -1.2 | R = 0.3 | Carica = 14
+X = 1.3 | Y = 1.7 | R = 0.4 | Carica = 12
+X = -1 | Y = 2.1 | R = 0.5 | Carica = 14
+
+Primi 5 elettroni dopo 0.5 secondi: 
+X = -1.9623 | Y = 2.46293 | Vx = -5.56307 | Vy = 0.710573 | Free = 1
+X = -1.75137 | Y = 0.269711 | Vx = -1.2285 | Vy = -1.05372 | Free = 1
+X = 2.06717 | Y = 3.79398 | Vx = -0.0437691 | Vy = 3.95197 | Free = 1
+X = 2.59297 | Y = 1.94849 | Vx = -0.729367 | Vy = 0.597991 | Free = 1
+X = -2.93896 | Y = 6.21691 | Vx = -6.03861 | Vy = 7.80922 | Free = 1
+
+Catturati in totale 15 elettroni e rimasti liberi 32
+Ioni: 
+X = -1.2 | Y = -1.3 | R = 0.2 | Carica = 9
+X = 1.4 | Y = -1.2 | R = 0.3 | Carica = 13
+X = 1.3 | Y = 1.7 | R = 0.4 | Carica = 10
+X = -1 | Y = 2.1 | R = 0.5 | Carica = 10
+
