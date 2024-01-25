@@ -3,3 +3,8 @@
 
 #include <fstream>
 using namespace std;
+
+//funzione per stampare a video 
+void print();
+
+//funzione per caricare in array_ da file

@@ -7,6 +7,19 @@
 using namespace std;
 
 int main(){
+    //variabili
+    ofstream ris;
+
+
+    //apri ofstream
+    ris.open("data/risultati.out");
+
+
+
+    //elimina array allocati dinamicamente
+
+    //chiudi ofstram
+    ris.close();
 
     return 0;
 }
