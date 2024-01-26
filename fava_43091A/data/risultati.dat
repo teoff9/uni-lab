@@ -1,0 +1,147 @@
+ES 1
+Totale iscritti = 60
+Di cui 20 professionisti e 40 non professionisti
+Primi 3 iscritti
+Cod = 2566 ama
+Cod = 2537 ama
+Cod = 245 pro
+Ultimi 3 iscritti
+Cod = 9 pro
+Cod = 754 pro
+Cod = 952 pro
+
+ES 2
+Caricate 247 mani in totale
+Prime 3 mani
+Cod = 2372 | Punti = 51
+Cod = 2832 | Punti = 65
+Cod = 2350 | Punti = 45
+Ultime 3 mani
+Cod = 2786 | Punti = 39
+Cod = 2867 | Punti = 58
+Cod = 2030 | Punti = 36
+
+ES 3
+Dopo aver aggiornato i giocatori con i punteggi:
+Primi 3 iscritti
+Cod = 2566 | is_pro = 0 | tot_punti = 245 | nmani = 5
+Cod = 2537 | is_pro = 0 | tot_punti = 253 | nmani = 5
+Cod = 245 | is_pro = 1 | tot_punti = 335 | nmani = 5
+Ultimi 3 iscritti
+Cod = 9 | is_pro = 1 | tot_punti = 256 | nmani = 4
+Cod = 754 | is_pro = 1 | tot_punti = 293 | nmani = 5
+Cod = 952 | is_pro = 1 | tot_punti = 278 | nmani = 4
+
+ES 4
+Descrizione di tutti i giocatori dopo il sort: 
+Cod = 192 | is_pro = 1 | tot_punti = 390 | nmani = 5
+Cod = 139 | is_pro = 1 | tot_punti = 361 | nmani = 5
+Cod = 22 | is_pro = 1 | tot_punti = 360 | nmani = 5
+Cod = 659 | is_pro = 1 | tot_punti = 354 | nmani = 5
+Cod = 245 | is_pro = 1 | tot_punti = 335 | nmani = 5
+Cod = 60 | is_pro = 1 | tot_punti = 335 | nmani = 5
+Cod = 550 | is_pro = 1 | tot_punti = 322 | nmani = 5
+Cod = 340 | is_pro = 1 | tot_punti = 318 | nmani = 5
+Cod = 895 | is_pro = 1 | tot_punti = 317 | nmani = 5
+Cod = 798 | is_pro = 1 | tot_punti = 314 | nmani = 4
+Cod = 162 | is_pro = 1 | tot_punti = 310 | nmani = 4
+Cod = 865 | is_pro = 1 | tot_punti = 298 | nmani = 5
+Cod = 907 | is_pro = 1 | tot_punti = 295 | nmani = 4
+Cod = 754 | is_pro = 1 | tot_punti = 293 | nmani = 5
+Cod = 93 | is_pro = 1 | tot_punti = 282 | nmani = 4
+Cod = 2750 | is_pro = 0 | tot_punti = 279 | nmani = 5
+Cod = 952 | is_pro = 1 | tot_punti = 278 | nmani = 4
+Cod = 2726 | is_pro = 0 | tot_punti = 274 | nmani = 5
+Cod = 2218 | is_pro = 0 | tot_punti = 271 | nmani = 5
+Cod = 549 | is_pro = 1 | tot_punti = 265 | nmani = 4
+Cod = 2828 | is_pro = 0 | tot_punti = 262 | nmani = 5
+Cod = 545 | is_pro = 1 | tot_punti = 260 | nmani = 4
+Cod = 2350 | is_pro = 0 | tot_punti = 259 | nmani = 5
+Cod = 9 | is_pro = 1 | tot_punti = 256 | nmani = 4
+Cod = 239 | is_pro = 1 | tot_punti = 254 | nmani = 4
+Cod = 2537 | is_pro = 0 | tot_punti = 253 | nmani = 5
+Cod = 2288 | is_pro = 0 | tot_punti = 250 | nmani = 5
+Cod = 2970 | is_pro = 0 | tot_punti = 249 | nmani = 5
+Cod = 2648 | is_pro = 0 | tot_punti = 248 | nmani = 5
+Cod = 2566 | is_pro = 0 | tot_punti = 245 | nmani = 5
+Cod = 2542 | is_pro = 0 | tot_punti = 243 | nmani = 5
+Cod = 2030 | is_pro = 0 | tot_punti = 243 | nmani = 5
+Cod = 2649 | is_pro = 0 | tot_punti = 225 | nmani = 4
+Cod = 2832 | is_pro = 0 | tot_punti = 220 | nmani = 4
+Cod = 2456 | is_pro = 0 | tot_punti = 219 | nmani = 4
+Cod = 2643 | is_pro = 0 | tot_punti = 216 | nmani = 4
+Cod = 2484 | is_pro = 0 | tot_punti = 214 | nmani = 4
+Cod = 2792 | is_pro = 0 | tot_punti = 214 | nmani = 4
+Cod = 2095 | is_pro = 0 | tot_punti = 203 | nmani = 4
+Cod = 2465 | is_pro = 0 | tot_punti = 201 | nmani = 4
+Cod = 2808 | is_pro = 0 | tot_punti = 193 | nmani = 4
+Cod = 2720 | is_pro = 0 | tot_punti = 190 | nmani = 4
+Cod = 2647 | is_pro = 0 | tot_punti = 186 | nmani = 4
+Cod = 2845 | is_pro = 0 | tot_punti = 179 | nmani = 3
+Cod = 2867 | is_pro = 0 | tot_punti = 172 | nmani = 3
+Cod = 2684 | is_pro = 0 | tot_punti = 163 | nmani = 4
+Cod = 2786 | is_pro = 0 | tot_punti = 161 | nmani = 3
+Cod = 2825 | is_pro = 0 | tot_punti = 161 | nmani = 3
+Cod = 2257 | is_pro = 0 | tot_punti = 160 | nmani = 3
+Cod = 2553 | is_pro = 0 | tot_punti = 155 | nmani = 3
+Cod = 2407 | is_pro = 0 | tot_punti = 155 | nmani = 3
+Cod = 2476 | is_pro = 0 | tot_punti = 152 | nmani = 3
+Cod = 2805 | is_pro = 0 | tot_punti = 152 | nmani = 3
+Cod = 2483 | is_pro = 0 | tot_punti = 149 | nmani = 3
+Cod = 2506 | is_pro = 0 | tot_punti = 147 | nmani = 3
+Cod = 2614 | is_pro = 0 | tot_punti = 143 | nmani = 3
+Cod = 2622 | is_pro = 0 | tot_punti = 141 | nmani = 3
+Cod = 2301 | is_pro = 0 | tot_punti = 141 | nmani = 3
+Cod = 2616 | is_pro = 0 | tot_punti = 138 | nmani = 3
+Cod = 2372 | is_pro = 0 | tot_punti = 134 | nmani = 3
+
+ES 5
+Classifica aggiornata:
+Cod = 659 | Punti = 1212
+Cod = 22 | Punti = 1117
+Cod = 60 | Punti = 1100
+Cod = 245 | Punti = 1088
+Cod = 550 | Punti = 1066
+Cod = 340 | Punti = 1044
+Cod = 215 | Punti = 887
+Cod = 234 | Punti = 879
+Cod = 874 | Punti = 879
+Cod = 400 | Punti = 870
+Cod = 139 | Punti = 819
+Cod = 515 | Punti = 781
+Cod = 584 | Punti = 761
+Cod = 984 | Punti = 749
+Cod = 14 | Punti = 734
+Cod = 934 | Punti = 669
+Cod = 192 | Punti = 660
+Cod = 865 | Punti = 655
+Cod = 41 | Punti = 600
+Cod = 932 | Punti = 583
+Cod = 895 | Punti = 569
+Cod = 491 | Punti = 544
+Cod = 545 | Punti = 543
+Cod = 40 | Punti = 525
+Cod = 162 | Punti = 522
+Cod = 9 | Punti = 518
+Cod = 754 | Punti = 502
+Cod = 732 | Punti = 500
+Cod = 851 | Punti = 464
+Cod = 687 | Punti = 405
+Cod = 442 | Punti = 390
+Cod = 542 | Punti = 388
+Cod = 767 | Punti = 381
+Cod = 239 | Punti = 370
+Cod = 453 | Punti = 360
+Cod = 549 | Punti = 359
+Cod = 93 | Punti = 341
+Cod = 411 | Punti = 317
+Cod = 798 | Punti = 308
+Cod = 907 | Punti = 256
+Cod = 852 | Punti = 253
+Cod = 952 | Punti = 250
+Cod = 232 | Punti = 249
+Cod = 727 | Punti = 239
+Cod = 490 | Punti = 227
+Cod = 866 | Punti = 223
+Cod = 805 | Punti = 217
+Cod = 740 | Punti = 213
